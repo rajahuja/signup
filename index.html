@@ -8,22 +8,19 @@
 <div id="images">
 </div>
 <script>
-(function() {
-var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-$.getJSON( flickerAPI, {
-tags: "mount rainier",
-tagmode: "any",
-format: "json"
-})
-.done(function( data ) {
-$.each( data.items, function( i, item ) {
-$( "<img/>" ).attr( "src", item.media.m ).appendTo( "#images" );
-if ( i === 3 ) {
-return false;
-}
-});
-});
-})();
+<script type="text/javascript">
+
+  $(document).ready(function () {
+
+    $.getJSON('http://www.otherdomain.com/orderservice.svc/GetOrders?callback=?', null, function (results) {
+
+        alert('Cross domain JS call achieved. Have your implementation going in here!');
+
+      });
+
+   });
+
+</script>
 </script>
 </body>
 </html>
